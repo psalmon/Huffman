@@ -7,4 +7,4 @@ Supply a string from the command line and the algorithm will compress it, output
 
 You can use the test function with a supplied string from inside Huffman.java to perform a junit assert for equality of pre / post encoding.
 
-Unimplemented corner case includes strings of value 0, 1, and 2.
+Unimplemented corner case includes strings of sizes 0, 1, and 2.
