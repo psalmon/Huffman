@@ -10,7 +10,6 @@
  *  
  *  
  */
-import org.junit.Assert;
 
 public class Huffman {
 	
@@ -29,25 +28,7 @@ public class Huffman {
 		
 		Decoder d1 = new Decoder(e1.getEncoded(), e1.getRoot());
 		System.out.println("Decoded to: " + d1.decode());
-		
-		//test cases
-		//test("test me");//spaces
-		//test("test\tme\ntoo");//tabs and new lines
-		//test("don't forget about me&me&me");//special characters
-		
-
-
-	}
 	
-	public static void test(String input){
-		Encoder e = new Encoder(input);
-		e.encode();
-		
-		Decoder d = new Decoder(e.getEncoded(), e.getRoot());
-		String decoded = d.decode();
-		
-		Assert.assertEquals(input, decoded);
-		
 	}
 
 }
