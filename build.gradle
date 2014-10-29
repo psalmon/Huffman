@@ -4,8 +4,9 @@ sourceCompatibility = 1.6
 version = '1.0'
 jar {
     manifest {
-        attributes 'Implementation-Title': 'Huffman Encoder Decoder',
-                   'Implementation-Version': version
+        attributes('Main-Class': 'Huffman',
+					'Implementation-Title': 'Huffman Encoder Decoder',
+					'Implementation-Version': version)
     }
 }
 
