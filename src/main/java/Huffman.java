@@ -14,11 +14,22 @@
 public class Huffman {
 	
 	public static void main(String[] args) {
-
 		String rawText = "You should supply your own string to compress from the command line!";
-		try{rawText = args[0];}//try for command line arg. Use default otherwise.
-		catch(Exception e){System.out.println("Using default string...");}
 		
+		//handle input if it is not enclosed in quotes
+		if(args.length > 1){
+			StringBuilder argString = new StringBuilder();
+			for (int i = 0; i < args.length; i++){
+				if (i != 0){
+					argString.append(" ");//prepends whitespace if not first word.
+				}
+				argString.append(args[i]);
+			}
+			rawText = argString.toString();
+		}else{
+			try{rawText = args[0];}//try for command line arg. Use default otherwise.
+			catch(Exception e){System.out.println("Using default string...");}
+		}
 		System.out.println("String: " + rawText);
 		Encoder e1 = new Encoder(rawText);
 		e1.encode();//encode the string using the huffman algorithm.
